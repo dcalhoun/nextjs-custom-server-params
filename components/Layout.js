@@ -4,7 +4,7 @@ import { Fragment } from 'react';
 
 const handleClick = e => {
   e.preventDefault();
-  Router.push(e.target.href);
+  Router.push(e.target.href, e.target.getAttribute('data-as'));
 };
 
 export default props => (
@@ -21,7 +21,15 @@ export default props => (
       —{' '}
       <Link href="/dynamic-page?token=bar" as="/dynamic-page/bar">
         <a>Dynamic Page: bar (w/ as)</a>
-      </Link>
+      </Link>{' '}
+      —{' '}
+      <a
+        onClick={handleClick}
+        href="/dynamic-page?token=sam"
+        data-as="/dynamic-page/sam"
+      >
+        Dynamic Page: sam (imperatively)
+      </a>
     </nav>
     <nav>
       <h2>Broken</h2>
@@ -31,11 +39,7 @@ export default props => (
       —{' '}
       <Link href="/dynamic-page/foo">
         <a>Dynamic Page: foo (w/o as)</a>
-      </Link>{' '}
-      —{' '}
-      <a onClick={handleClick} href="/dynamic-page/baz">
-        Dynamic Page: baz (imperatively)
-      </a>
+      </Link>
     </nav>
     <hr />
     <h1>{props.children}</h1>
