@@ -6,6 +6,10 @@
   "author": "David Calhoun <dpcalhoun@gmail.com>",
   "license": "MIT",
   "private": true,
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:dcalhoun/nextjs-custom-server-params.git"
+  },
   "scripts": {
     "dev": "node server.js",
     "build": "next build",
@@ -13,6 +17,7 @@
   },
   "dependencies": {
     "next": "^5.0.0",
+    "path-match": "^1.2.4",
     "react": "^16.2.0",
     "react-dom": "^16.2.0"
   }

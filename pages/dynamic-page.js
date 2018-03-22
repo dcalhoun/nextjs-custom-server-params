@@ -1,3 +1,11 @@
 import Layout from '../components/Layout';
 
-export default props => <Layout>Hello, Dynamic Page!</Layout>;
+const DynamicPage = props => (
+  <Layout>Hello, Dynamic Page: {props.token}!</Layout>
+);
+
+DynamicPage.getInitialProps = async ({ query }) => {
+  return { token: query.token };
+};
+
+export default DynamicPage;
