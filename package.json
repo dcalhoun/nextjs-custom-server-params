@@ -1,0 +1,19 @@
+{
+  "name": "nextjs-custom-server-params",
+  "version": "0.0.1",
+  "description": "Test case for Next.js custom server with params.",
+  "main": "pages/index.js",
+  "author": "David Calhoun <dpcalhoun@gmail.com>",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "dev": "next",
+    "build": "next build",
+    "start": "next start"
+  },
+  "dependencies": {
+    "next": "^5.0.0",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0"
+  }
+}
